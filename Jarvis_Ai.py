@@ -53,8 +53,8 @@ def send_email(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('harshchoudhary3113@gmail.com', 'googlepassword123@')
-    server.sendmail('harshchoudhary3113@gmail.com', to, content)
+    server.login('email@gmail.com', 'password')
+    server.sendmail('email@gmail.com', to, content)
     server.close()
 
 
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             try:
                 speak("What should i say ?")
                 content = takescommand()
-                to = "jaye19is@cmrit.ac.in"
+                to = 'email@gmail.com'
                 send_email(to, content)
                 speak("Email has been sent!")
             except Exception as r:
